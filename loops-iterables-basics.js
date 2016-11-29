@@ -13,21 +13,24 @@ var simpList = [
     "Maggie"
 ]
 
-var simpList = function () {}
-for (var i = 0; i < simpList.length; i++) {
-  var simList = simpList[i]
-  simList = simList.split("")
-  for (var j = 0; j < simList.length; j++) {
-    var numchar = simList[j];
-    if (numchar < 6 ) {
-      push ("Sampson");
-      if (numchar => 6)
-      push ("Simpson");
-      return simpList;
-    }
-  }
+var simpOrSamp = function (moRay){
+   var newArray = []
+   for(var i = 0; i < moRay.length; i++){
+      if(moRay[i].length < 6){
+
+         var newName = moRay[i] + " Sampson"
+      }
+      else{
+         var newName = moRay[i] + " Simpson"
+      }
+         newArray.push(newName)
+   }
+
+
+      return newArray;
+
 }
-}
+
 
 
 
@@ -56,15 +59,19 @@ var allNames = [
     "Fred",
     "Yvette"
 ]
-for (var i = 0; i < allNames.length; i++) {
-  var alNm = allNames[i]
-  alNm = alNm.split("")
-  for (var j = 0; j < alNm.length; j++) {
-    var numchar = alNm[j];
-    if (numchar === 4 ) {
+
+var shortiesOnly = function(shirtArray){
+  var alNm = []
+  for (var i = 0; i < shirtArray.length; i++) {
+    if (shirtArray[i].length <= 4){
+      var shirtName = shirtArray [i];
+      smallArray.push(newName)
     }
+    else{}
   }
+  return smallArray;
 }
+
 
 
 
