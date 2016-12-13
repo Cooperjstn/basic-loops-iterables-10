@@ -3,6 +3,18 @@
 //    If less than 6 characters, append Sampson: e.g. "Homer Sampson"
 //    If 6 characters or longer, append Simpson: 'Jessica Simpson'
 ////------------------------------------------------------------------
+var simpSamp = function (moRay){
+   var nuRay = []
+    for(var i = 0; i < moRay.length; i++){
+      if(moRay[i].length < 6){
+        var nuName = moRay[i] + " Sampson"
+        } else {
+         var nuName = moRay[i] + " Simpson"
+          }
+            nuRay.push(nuName)
+            }
+              return nuRay;
+            }
 
 var simpList = [
     "Homer",
@@ -13,29 +25,9 @@ var simpList = [
     "Maggie"
 ]
 
-var simpOrSamp = function (moRay){
-   var newArray = []
-   for(var i = 0; i < moRay.length; i++){
-      if(moRay[i].length < 6){
-
-         var newName = moRay[i] + " Sampson"
-      }
-      else{
-         var newName = moRay[i] + " Simpson"
-      }
-         newArray.push(newName)
-   }
 
 
-      return newArray;
-
-}
-
-
-
-
-
-var modifiedNamesList = simpOrSamp(simpList)
+var modifiedNamesList = simpSamp(simpList)
 
 console.assert( modifiedNamesList[1] === "OJ Sampson" )
 console.assert( modifiedNamesList[2] === "Marge Sampson" )
@@ -65,12 +57,27 @@ var shortiesOnly = function(shirtArray){
   for (var i = 0; i < shirtArray.length; i++) {
     if (shirtArray[i].length <= 4){
       var shirtName = shirtArray [i];
-      smallArray.push(newName)
+      alNm.push(shirtName)
     }
-    else{}
-  }
-  return smallArray;
+    else{
+
+  return alNm;
 }
+} }
+
+
+var allNames = [
+    "Ed",
+    "Tom",
+    "Elfrid",
+    "Sam",
+    "Bartholomeu",
+    "Wayne",
+    "Theodore",
+    "Ingrid",
+    "Fred",
+    "Yvette"
+]
 
 
 
